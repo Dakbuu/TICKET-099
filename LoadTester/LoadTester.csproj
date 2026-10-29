@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>BattleArena</RootNamespace>
+    <AssemblyName>LoadTester</AssemblyName>
+  </PropertyGroup>
+
+  <!-- 학번 설정 파일을 세 프로젝트가 공유합니다 -->
+  <ItemGroup>
+    <Compile Include="..\Shared\StudentConfig.cs" Link="Shared\StudentConfig.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

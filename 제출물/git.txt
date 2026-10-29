@@ -1,0 +1,53 @@
+학번 : 22220754
+이름 : 전누리
+
+저장소 주소 : (여기에 2주차에 만든 본인 저장소 주소를 붙여 넣으세요. 예: https://github.com/아이디/저장소이름)
+작업 브랜치 : midterm-ticket-099
+
+==================== git log --oneline --graph ====================
+(아래 명령을 실행한 결과를 그대로 붙여 넣으세요)
+
+    git log --oneline --graph
+
+===================================================================
+
+
+---------- 붙여 넣은 뒤 이 아래 안내는 지우고 제출하세요 ----------
+
+[커밋 순서 예시 — 8개 이상, 작업할 때마다 하나씩]
+
+공지문 기준: 한 번에 몰아서 커밋하면 감점, "수정"·"작업" 같은 메시지도 감점.
+아래처럼 실제로 한 일을 할 때마다 커밋하세요.
+
+ 1. 납품 원본 추가 및 학번 설정 (StudentConfig 22220754)
+ 2. 원본 서버 부하 측정 결과 추가 (측정결과_22220754_수정전.csv)
+ 3. PacketHelper: 블로킹 Receive를 ReceiveAsync로 바꾸고 길이만큼 반복 수신
+ 4. ClientSession: async void를 async Task로 바꾸고 깨진 JSON 무시
+ 5. 로그인 전 세션에는 Broadcast하지 않도록 IsLoggedIn 추가
+ 6. UdpServer: 받은 바이트 수만큼만 문자열로 변환
+ 7. UdpServer: seq 비교를 <= 로 바꿔 중복 패킷 차단
+ 8. UdpServer: 등록된 주소가 아닌 MOVE 패킷 버림
+ 9. TestClient: UDP 소켓 Bind 추가
+10. 수정 후 부하 측정 결과 추가 (측정결과_22220754_수정후.csv)
+11. 보고서와 Part C 판정표 추가
+
+[명령어]
+
+  cd "본인 저장소 폴더"
+  git checkout -b midterm-ticket-099
+
+  (원본 납품 파일을 저장소에 복사한 뒤)
+  git add .
+  git commit -m "납품 원본 추가 및 학번 설정"
+
+  (한 가지를 고칠 때마다)
+  git add OutsourcedServer/PacketHelper.cs
+  git commit -m "PacketHelper: 블로킹 Receive를 ReceiveAsync로 바꾸고 길이만큼 반복 수신"
+
+  (끝나면)
+  git push -u origin midterm-ticket-099
+  git log --oneline --graph      ← 이 출력을 위에 붙여 넣고 캡처도 함께 제출
+
+[주의]
+- 커밋하기 전에 bin/, obj/, .vs/ 폴더는 올리지 않습니다 (.gitignore에 추가).
+- LoadTester/Program.cs는 원본 그대로 커밋해야 합니다 (공백도 바뀌면 안 됨).
